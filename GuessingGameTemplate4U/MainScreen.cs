@@ -54,7 +54,12 @@ namespace GuessingGameTemplate4U
                 Thread.Sleep(1000);
 
                 //TODO close this screen and open a Results Screen (you need to create this)
-                
+                Form f = this.FindForm();
+                f.Controls.Remove(this);
+
+                FinishScreen fs = new FinishScreen();
+                f.Controls.Add(fs);
+
 
             }
 
