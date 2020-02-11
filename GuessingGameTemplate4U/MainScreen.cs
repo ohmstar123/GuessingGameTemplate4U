@@ -19,6 +19,8 @@ namespace GuessingGameTemplate4U
         public static Random randNum = new Random();
         int rand = randNum.Next(1, 101);
 
+        
+
         public MainScreen()
         {
             InitializeComponent();
@@ -31,14 +33,19 @@ namespace GuessingGameTemplate4U
 
             //TODO add guess to List of guesses on Form1
 
+            
+
 
             if (guess < rand)
             {
                 outputLabel.Text = "Too Low!";
+                Form1.guessNumbers.Add(guess);
+
             }
             else if (guess > rand)
             {
                 outputLabel.Text = "Too High!";
+                Form1.guessNumbers.Add(guess);
             }
             else
             {
@@ -47,6 +54,7 @@ namespace GuessingGameTemplate4U
                 Thread.Sleep(1000);
 
                 //TODO close this screen and open a Results Screen (you need to create this)
+                
 
             }
 
